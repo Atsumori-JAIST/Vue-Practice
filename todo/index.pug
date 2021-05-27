@@ -1,0 +1,21 @@
+﻿<!-- extends layout -->
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{title} - Node.js Express Application
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui')
+    script(src='https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js', defer)
+    script(src='https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js', defer)
+    script(src='/js/main.js', defer)
+    
+  body
+    #app 
+      v-app 
+        v-main 
+          v-container Hello World! 
