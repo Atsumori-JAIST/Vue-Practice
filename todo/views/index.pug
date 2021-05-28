@@ -29,18 +29,14 @@ html
 
           v-container
             v-radio-group(v-model='selectedState')
-              v-radio(v-for='(state, i) in status', :key='i', :label='state.label')
+              v-radio(v-for='(state, i) in status', :key='i', :value='state.value', :label='state.label')
 
           v-container 
-            v-card.mx-auto
-              v-list(dense)
-                v-subheader List Test 
-                v-list-item-group(v-model='selectedItem', color='teal lighten-2')
-                  v-list-item(v-for='(item, i) in items' ,:key='i')
-                    v-list-item-icon
-                      v-icon(v-text='item.icon')
-                    v-list-item-content
-                      v-list-item-title(v-text='item.text')
-        
+            v-card.mx-auto 
+              v-data-table(:headers='headers', :items='todos', :items-per-page='3',
+                loading=false, loading-text='Loading... Please wait')
+                template(v-slot:item.progress='{ item }')
+                  v-chip(:color='getColor(item.progress)', dark) {{ item.progress }}
+
 
         v-footer(app) Footer
