@@ -28,8 +28,9 @@ html
         v-main
 
           v-container
-            v-radio-group(v-model='selectedState')
-              v-radio(v-for='(state, i) in status', :key='i', :label='state.label')
+            v-btn(elevation='6', color='teal lighten-2', rounded, dark) Roubded-Button Test!
+            v-btn.mx-2(fab, color='teal lighten-2', dark)
+              v-icon mdi-plus
 
           v-container 
             v-card.mx-auto
